@@ -1,0 +1,268 @@
+﻿
+@{
+	ViewBag.Title = "Signup";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Register - Brand</title>
+	<link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+	<link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css">
+	<link rel="stylesheet" href="~/assets/fonts/simple-line-icons.min.css">
+	<link rel="stylesheet" href="~/assets/css/Dynamic-Table.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+	<link rel="stylesheet" href="~/assets/css/Login-Red.css">
+	<link rel="stylesheet" href="~/assets/css/smoothproducts.css">
+	<style>
+		.hide {
+			display: none;
+		}
+
+		.show {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background-color: rgb(52,58,64);">
+		<div class="container">
+			<a class="navbar-brand logo" href="#">KAVTECH</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse"
+				 id="navcol-1">
+				<ul class="nav navbar-nav ml-auto">
+					<li class="nav-item" role="presentation"><a class="nav-link" href="index.html"><i class="fa fa-home"></i>Home</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="page registration-page"></main>
+	<div>
+		<div class="container">
+			<div class="hide" id="error" style="margin-bottom:0; color: red"></div>
+		</div>
+		<div class="row" data-aos="fade-up" style="padding: 18px;">
+			<div class="col-md-6 border border-primary" style="margin: 0px;padding: 37px;height: 700px;">
+				<h1>Personal Info</h1>
+				<form style="margin: 0px 0px;width: 400px;">
+					<div class="form-group"><label for="name">First Name *</label><input class="form-control item" type="text" id="firstName"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Last Name *</label><input class="form-control item" type="text" id="lastName"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Father's Name *</label><input class="form-control item" type="text" id="fatherName"><span id="Fathers_Nam" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">CNIC *</label><input class="form-control item" type="number" id="CNIC"><span id="CNIC" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="email">Date Of Birth *</label><input class="form-control" type="date" id="DOB"><span id="DOB" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group">
+						<label for="name">Gender *</label>
+						<div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="gender" value="M"><label class="form-check-label" for="formCheck-1">Male</label>
+								<input class="form-check-input" type="radio" id="gender" value="F"><label class="form-check-label" for="formCheck-2">Female</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group"><label for="name">Email *</label><input class="form-control item" type="text" id="email"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Username *</label><input class="form-control item" type="text" id="username"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Password *</label><input class="form-control item" type="password" id="password"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+
+				</form>
+			</div>
+			<div class="col-md-6 border border-dark" style="margin: 0px;padding: 38px">
+				<h1>Contact Info</h1>
+				<form style="margin: 0px 0px;width: 400px;">
+					<div class="form-group"><label for="name">Current Address *</label><input class="form-control item" type="text" id="Current_Address"><span id="Current_Address" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Permanent Address *</label><input class="form-control item" type="text" id="Permanent_Address"><span id="Permanent_Address" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Home Phone *</label><input class="form-control item" type="number" min="0" max="11" id="Home"><span id="Hom" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Mobile Phone *</label><input class="form-control item" type="number" min="0" max="11" id="Mobile"><span id="Mobile" class="text-danger font-weight-bold"> </span></div>
+				</form>
+			</div>
+		</div>
+		<div class="row" data-aos="fade-up" style="margin-bottom: 31px;padding: 18px;">
+			<div class="col-md-6 border border-dark" style="margin: 0px;padding: 38px">
+				<h1>Education</h1>
+				<form style="margin: 0px 0px;width: 400px;">
+					<div class="form-group"><label for="name">&nbsp;Degree Title *</label><input class="form-control item" type="text" id="Degree"><span id="Degre" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Duration *</label><input class="form-control item" type="text" id="Duration_of_Degree"><span id="Duration_of_Degre" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">Institute Name *</label><input class="form-control item" type="text" id="Institute"><span id="Institut" class="text-danger font-weight-bold"> </span></div>
+					<div class="form-group"><label for="name">CGPA *</label><input class="form-control" type="number" min="0" max="4" step="0.01" id="CGPA"><span id="CGP" class="text-danger font-weight-bold"> </span></div>
+				</form>
+			</div>
+			<div class="col-md-6 border border-primary" style="margin: 0px;padding: 38px">
+				<h1>Professional Experence</h1>
+				<form style="margin: 0px 0px;width: 400px;">
+					<div class="form-group">
+						<label for="name">Job Title *</label>
+						<select class="form-control" id="JobId" style="margin-left: 0px;">
+							<option value="0" selected>Select</option>
+							<option value="1">Developer</option>
+							<option value="2">QA</option>
+						</select>
+					</div>
+					<div class="form-group"><label for="name">Experience</label><textarea class="form-control item" type="text" id="experience"></textarea><span id="companyName" class="text-danger font-weight-bold"> </span></div>
+				</form>
+			</div>
+		</div>
+	</div>
+<footer class="page-footer dark">
+	<div class="clean-block add-on social-icons blue"><a class="btn btn-primary" id="submit"  onclick="validation()" style="width: 276px;height: -16px;background-color: #1400ff;">Submit</a></div>
+</footer>
+	
+	<script src="~/Scripts/jquery-1.10.2.js"></script>
+	<script src="~/assets/js/jquery.min.js"></script>
+	<script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+	<script src="~/assets/js/smoothproducts.min.js"></script>
+	<script src="~/assets/js/theme.js"></script>
+	<script src="~/assets/js/bs-animation.js"></script>
+	<script src="~/assets/js/Dynamic-Table.js"></script>
+	<script src="~/assets/js/functions.js"></script>
+	<script src="~/assets/js/candidateFunctions.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+	<script type="text/javascript">
+
+
+		function validation(){
+
+			var fullName = document.getElementById('fullName').value;
+			var Fathers_Name = document.getElementById('Fathers_Name').value;
+			var CNIC = document.getElementById('CNIC').value;
+			var D_O_B_ = document.getElementById('D_O_B_').value;
+			var Current_Address = document.getElementById('Current_Address').value;
+			var Permanent_Address = document.getElementById('Permanent_Address').value;
+			var Home = document.getElementById('Home').value;
+			var Mobile = document.getElementById('Mobile').value;
+			var Degree = document.getElementById('Degree').value;
+			var Duration_of_Degree = document.getElementById('Duration_of_Degree').value;
+			var Institute = document.getElementById('Institute').value;
+			var Job_ID = document.getElementById('Job_ID').value;
+			var companyName = document.getElementById('companyName').value;
+			var jobDuration = document.getElementById('jobDuration').value;
+
+
+
+			if(fullName == ""){
+				document.getElementById('fullNam').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+
+			if(Fathers_Name == ""){
+				document.getElementById('Fathers_Nam').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(CNIC == ""){
+				document.getElementById('CNI').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(D_O_B_ == ""){
+				document.getElementById('D_O_B').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(Current_Address == ""){
+				document.getElementById('Current_Addres').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(Permanent_Address == ""){
+				document.getElementById('Permanent_Addres').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(Home == ""){
+				document.getElementById('Hom').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+
+			if(isNaN(Home)){
+				document.getElementById('Hom').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+
+
+			if(Mobile == ""){
+				document.getElementById('Mobil').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(isNaN(Mobile)){
+				document.getElementById('Mobil').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(Mobile.length!=11){
+				document.getElementById('Mobil').innerHTML =" ** Mobile Number must be 11 digits only";
+				return false;
+			}
+
+			if(Degree == ""){
+				document.getElementById('Degre').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(Duration_of_Degree == ""){
+				document.getElementById('Duration_of_Degre').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(Institute == ""){
+				document.getElementById('Institut').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(Job_ID == ""){
+				document.getElementById('Job_I').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(companyName == ""){
+				document.getElementById('companyNam').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+			if(jobDuration == ""){
+				document.getElementById('jobDuratio').innerHTML =" ** Please fill the above field";
+				return false;
+			}
+		}
+
+		$("#submit").click(function() {
+			
+
+			var obj = new Object();
+			obj.Fathers_Name = $("#fatherName").val();
+			obj.DOB = $("#DOB").val();
+			obj.Gender = $("#gender").val();
+			obj.CNIC = $("#CNIC").val();
+			obj.Permanent_Address = $("#Permanent_Address").val();
+			obj.Current_Address = $("#Current_Address").val();
+			obj.username = $("#username").val();
+			obj.First_Name = $("#firstName").val();
+			obj.Last_Name = $("#lastName").val();
+			obj.Job_ID = $("#JobId").val();
+			obj.Email = $("#email").val();
+			obj.Experience = $("#experience").val();
+			obj.password1 = $("#password").val();
+			obj.CGPA = $("#CGPA").val();
+			obj.Institute = $("#Institute").val();
+			obj.Duration_of_Degree = $("#Duration_of_Degree").val();
+			obj.Degree = $("#Degree").val();
+			obj.Mobile = $("#Mobile").val();
+			obj.Home = $("#Home").val();
+
+			var Url = '@Url.Action("Signup", "Home")';
+			debugger;
+			$.ajax({
+				url: Url,
+				data: obj,
+				type: 'POST',
+				success: function (resp) {
+					if(resp == null)
+						alert(resp);
+				},
+				error: function (e) {
+					alert("Kindly Sign up properly");
+				}
+			});
+
+		});
+
+		
+	</script>
+</body>
+
+</html>
+

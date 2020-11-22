@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "HRHome";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>kavtech(updated pages)</title>
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="~/assets/css/Dynamic-Table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="~/assets/css/Login-Red.css">
+    <link rel="stylesheet" href="~/assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="~/assets/css/popups.css">
+    <link rel="stylesheet" href="~/assets/css/smoothproducts.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">KAVTECH - HR</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                 id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="about-us.html">ABOUT</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="contact-us.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="clean-block clean-form dark">
+        <div class="container">
+            <div class="block-heading"></div>
+        </div>
+        <div class="container">
+            <div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-7">Requests</a></li>
+                    <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-8">Interviews</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-9">Chosen Candidates</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-10">Posts</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" role="tabpanel" id="tab-1" style="padding: 20px;"><button class="btn btn-primary" type="button" style="margin: 25px;">Add Candidates</button><button class="btn btn-primary" type="button">view Reports</button></div>
+                    <div class="tab-pane" role="tabpanel" id="tab-7">
+                        <div class="table-responsive" style="width: 930px;padding: -1px;margin: 0px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>a</td>
+                                        <td><button class="btn btn-primary" type="button" style="margin: 0px;">upload post</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>b</td>
+                                        <td><button class="btn btn-primary" type="button">upload post</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane active" role="tabpanel" id="tab-8">
+                        <button class="btn btn-primary" type="button" style="margin: 23px;">enter interview timing</button>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Candidate</th>
+                                        <th>Interviewer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="button">modify</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="button">modify</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-9">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Rank</th>
+                                        <th>Candidate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="button">send letter</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="button">send letter</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-10">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td style="margin: 0px;height: 59px;padding: 5px;"><button class="btn btn-primary" type="button" style="filter: grayscale(0%);margin: 10px;">close vacancy</button><button class="btn btn-primary" type="button" style="margin: 10px;">shortlist candidates</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td style="width: 600px;padding: 5px;"><button class="btn btn-primary" type="button" style="margin: 10px;"><strong>CLOSE VACANCY</strong><br></button><button class="btn btn-primary" type="button" style="margin: 10px;">shortlist candidates</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-2">
+                        <p>Content for tab 2.</p>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-3">
+                        <p>Content for tab 3.</p>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-4">
+                        <p>Tab content.</p>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-5">
+                        <p>Tab content.</p>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-6">
+                        <p>Tab content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="~/assets/js/smoothproducts.min.js"></script>
+    <script src="~/assets/js/theme.js"></script>
+    <script src="~/assets/js/bs-animation.js"></script>
+    <script src="~/assets/js/Dynamic-Table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="~/assets/js/popupjs.js"></script>
+</body>
+
+</html>

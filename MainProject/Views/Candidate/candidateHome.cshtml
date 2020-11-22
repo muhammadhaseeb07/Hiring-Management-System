@@ -1,0 +1,329 @@
+﻿
+@{
+    ViewBag.Title = "candidateHome";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>kavtech(updated pages)</title>
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="~/assets/css/Dynamic-Table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="~/assets/css/Login-Red.css">
+    <link rel="stylesheet" href="~/assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="~/assets/css/popups.css">
+    <link rel="stylesheet" href="~/assets/css/smoothproducts.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark clean-navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">KAVTECH - Candidate</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                 id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="about-us.html">ABOUT</a></li>
+                    <li class="nav-item item" role="presentation"><a class="nav-link" href="contact-us.html">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container" style="padding: 0px 15px;height: 120px;margin: 0px 12.6667px;">
+            <div style="padding: 80px 0px 0px;margin: 0px 0px 40px;"></div>
+        </div>
+        <div class="container" style="padding: 15px 15px;height: 277px;margin: 0px;">
+            <div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-1">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">Search Vacancies</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3">Check Status</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-4">Check Interview Timing</a></li>
+                    <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-5">Appointment Letter</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" role="tabpanel" id="tab-1">
+                        <div>
+                            <div class="container">
+                                <div class="hide" id="error" style="margin-bottom:0; color: red"></div>
+                            </div>
+                            <div class="row" data-aos="fade-up" style="padding: 18px;">
+                                <div class="col-md-6 border border-primary" style="margin: 0px;padding: 37px;height: 700px;">
+                                    <h1>Personal Info</h1>
+                                    <form style="margin: 0px 0px;width: 400px;">
+                                        <input type="hidden" id="Can_ID"/>
+                                        <div class="form-group"><label for="name">First Name *</label><input readonly="readonly" class="form-control item" type="text" id="firstName"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Last Name *</label><input readonly="readonly" class="form-control item" type="text" id="lastName"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Father's Name *</label><input readonly="readonly" class="form-control item" type="text" id="fatherName"><span id="Fathers_Nam" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">CNIC *</label><input readonly="readonly" class="form-control item" type="number" id="CNIC"><span id="CNIC" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="email">Date Of Birth *</label><input readonly="readonly" class="form-control" type="date" id="DOB"><span id="DOB" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group">
+                                            <label for="name">Gender *</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input readonly="readonly" class="form-check-input" type="radio" id="gender" name="1" value="M"><label class="form-check-label" for="formCheck-1">Male</label>
+                                                    <input readonly="readonly" class="form-check-input" type="radio" id="gender" name="1" value="F"><label class="form-check-label" for="formCheck-2">Female</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label for="name">Email *</label><input readonly="readonly" class="form-control item" type="text" id="email"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Username *</label><input readonly="readonly" class="form-control item" type="text" id="username"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Password *</label><input readonly="readonly" class="form-control item" type="password" id="password"><span id="fullNam" class="text-danger font-weight-bold"> </span></div>
+
+                                    </form>
+                                </div>
+                                <div class="col-md-6 border border-dark" style="margin: 0px;padding: 38px">
+                                    <h1>Contact Info</h1>
+                                    <form style="margin: 0px 0px;width: 400px;">
+                                        <div class="form-group"><label for="name">Current Address *</label><input readonly="readonly" class="form-control item" type="text" id="Current_Address"><span id="Current_Address" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Permanent Address *</label><input readonly="readonly" class="form-control item" type="text" id="Permanent_Address"><span id="Permanent_Address" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Home Phone *</label><input readonly="readonly" class="form-control item" type="number" min="0" max="11" id="Home"><span id="Hom" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Mobile Phone *</label><input readonly="readonly" class="form-control item" type="number" min="0" max="11" id="Mobile"><span id="Mobile" class="text-danger font-weight-bold"> </span></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row" data-aos="fade-up" style="margin-bottom: 31px;padding: 18px;">
+                                <div class="col-md-6 border border-dark" style="margin: 0px;padding: 38px">
+                                    <h1>Education</h1>
+                                    <form style="margin: 0px 0px;width: 400px;">
+                                        <div class="form-group"><label for="name">&nbsp;Degree Title *</label><input readonly="readonly" class="form-control item" type="text" id="Degree"><span id="Degre" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Duration *</label><input readonly="readonly" class="form-control item" type="text" id="Duration_of_Degree"><span id="Duration_of_Degre" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">Institute Name *</label><input readonly="readonly" class="form-control item" type="text" id="Institute"><span id="Institut" class="text-danger font-weight-bold"> </span></div>
+                                        <div class="form-group"><label for="name">CGPA *</label><input readonly="readonly" class="form-control" type="number" min="0" max="4" step="0.01" id="CGPA"><span id="CGP" class="text-danger font-weight-bold"> </span></div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6 border border-primary" style="margin: 0px;padding: 38px">
+                                    <h1>Professional Experence</h1>
+                                    <form style="margin: 0px 0px;width: 400px;">
+                                        <div class="form-group">
+                                            <label for="name">Job Title *</label>
+                                            <select readonly="readonly" class="form-control" id="JobId" style="margin-left: 0px;">
+                                                <option readonly="readonly" value="0" selected>Select</option>
+                                                <option readonly="readonly" value="1">Developer</option>
+                                                <option readonly="readonly" value="2">QA</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group"><label for="name">Experience</label><textarea readonly="readonly" class="form-control item" type="text" id="experience"></textarea><span id="companyName" class="text-danger font-weight-bold"> </span></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <footer class="page-footer dark">
+                                <div class="clean-block add-on social-icons blue"><a class="btn btn-primary" id="edit"  style="width: 276px;height: -16px;background-color: #1400ff;">Edit</a></div>
+                                <div class="clean-block add-on social-icons blue"><a class="btn btn-primary" id="update"  style="width: 276px;height: -16px;background-color: #1400ff;">Update</a></div>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-2">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td style="padding: 12px;width: 200px;"><button class="btn btn-primary" type="button">view</button></td>
+                                        <td style="width: 200px;"><button class="btn btn-primary" type="button">apply</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="button">view</button></td>
+                                        <td><button class="btn btn-primary" type="button">apply</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-3">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Rank</th>
+                                        <th>Notifications</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="width: 200px;"><button class="btn btn-primary" type="button">remove</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><button class="btn btn-primary" type="button">remove</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-4">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane active" role="tabpanel" id="tab-5">
+                        <h1>Notifications</h1>
+                        <div style="padding: 9px;">
+                            <div style="padding: 9px;">
+                                <p style="height: 21px;padding: 0px;margin: 0px;">&lt;Description of offer&gt; &nbsp;</p>
+                                <div style="padding: 0px;margin: 20px;width: 619px;"><button class="btn btn-primary" type="button" style="margin: 15px;">Accept</button><button class="btn btn-primary" type="button" style="margin: 15px;">Reject</button></div>
+                            </div>
+                            <div style="padding: 0px;margin: 20px;width: 619px;">
+                                <p style="height: 21px;padding: 0px;margin: 0px;">&lt;Description of offer&gt; &nbsp;</p>
+                                <div><button class="btn btn-primary" type="button" style="margin: 15px;">Accept</button><button class="btn btn-primary" type="button" style="margin: 15px;">Reject</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="~/assets/js/smoothproducts.min.js"></script>
+    <script src="~/assets/js/theme.js"></script>
+    <script src="~/assets/js/bs-animation.js"></script>
+    <script src="~/assets/js/Dynamic-Table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+<script src="~/assets/js/popupjs.js"></script>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/assets/js/jquery.min.js"></script>
+<script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+<script src="~/assets/js/smoothproducts.min.js"></script>
+<script src="~/assets/js/theme.js"></script>
+<script src="~/assets/js/bs-animation.js"></script>
+<script src="~/assets/js/Dynamic-Table.js"></script>
+<script src="~/assets/js/functions.js"></script>
+<script src="~/assets/js/candidateFunctions.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+<script>
+    $(document).ready(function() {
+        var data = @Html.Raw(Json.Encode(ViewBag.CandidateData));
+        $("#Can_ID").val(data[0].Can_ID);
+        $("#fatherName").val(data[0].Fathers_Name);
+        $("#DOB").val(data[0].DOB);
+        $("#gender").val(data[0].Gender);
+        $("#CNIC").val(data[0].CNIC);
+        $("#Permanent_Address").val(data[0].Permanent_Address);
+        $("#Current_Address").val(data[0].Current_Address);
+        $("#username").val(data[0].username);
+        $("#firstName").val(data[0].First_Name);
+        $("#lastName").val(data[0].Last_Name);
+        $("#JobId").val(data[0].Job_ID);
+        $("#email").val(data[0].Email);
+        $("#experience").val(data[0].Experience);
+        $("#password").val(data[0].password1);
+        $("#CGPA").val(data[0].CGPA);
+        $("#Institute").val(data[0].Institute);
+        $("#Duration_of_Degree").val(data[0].Duration_of_Degree);
+        $("#Degree").val(data[0].Degree);
+        $("#Mobile").val(data[0].Mobile);
+        $("#Home").val(data[0].Home);
+    });
+
+    document.getElementById('edit').onclick = function() {
+        document.getElementById('fatherName').readOnly = false;
+        document.getElementById('DOB').readOnly = false;
+        document.getElementById('gender').readOnly = false;
+        document.getElementById('CNIC').readOnly = false;
+        document.getElementById('Permanent_Address').readOnly = false;
+        document.getElementById('Current_Address').readOnly = false;
+        document.getElementById('username').readOnly = false;
+        document.getElementById('firstName').readOnly = false;
+        document.getElementById('lastName').readOnly = false;
+        document.getElementById('JobId').readOnly = false;
+        document.getElementById('email').readOnly = false;
+        document.getElementById('experience').readOnly = false;
+        document.getElementById('password').readOnly = false;
+        document.getElementById('CGPA').readOnly = false;
+        document.getElementById('Institute').readOnly = false;
+        document.getElementById('Duration_of_Degree').readOnly = false;
+        document.getElementById('Degree').readOnly = false;
+        document.getElementById('Mobile').readOnly = false;
+        document.getElementById('Home').readOnly = false;
+    };
+    $("#update").click(function() {
+        var obj = new Object();
+        ob.Can_ID = $("#Can_ID").val();
+        obj.Fathers_Name = $("#fatherName").val();
+        obj.DOB = $("#DOB").val();
+        obj.Gender = $("#gender").val();
+        obj.CNIC = $("#CNIC").val();
+        obj.Permanent_Address = $("#Permanent_Address").val();
+        obj.Current_Address = $("#Current_Address").val();
+        obj.username = $("#username").val();
+        obj.First_Name = $("#firstName").val();
+        obj.Last_Name = $("#lastName").val();
+        obj.Job_ID = $("#JobId").val();
+        obj.Email = $("#email").val();
+        obj.Experience = $("#experience").val();
+        obj.password1 = $("#password").val();
+        obj.CGPA = $("#CGPA").val();
+        obj.Institute = $("#Institute").val();
+        obj.Duration_of_Degree = $("#Duration_of_Degree").val();
+        obj.Degree = $("#Degree").val();
+        obj.Mobile = $("#Mobile").val();
+        obj.Home = $("#Home").val();
+
+        var Url = '@Url.Action("candidateHome", "Candidate")';
+        debugger;
+        $.ajax({
+            url: Url,
+            data: obj,
+            type: 'POST',
+            success: function(resp) {
+                if (resp == null)
+                    alert(resp);
+            },
+            error: function(e) {
+                alert("Kindly Sign up properly");
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
